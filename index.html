@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/bmw.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      nav .logo {
+        font-size: 23px;
+        font-weight: bold;
+      }
+      nav .content a,
+      nav .content .btn {
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #333;
+        transition: color 0.3s, background-color 0.3s;
+      }
+      nav .content .btn {
+        background: #2b2c2c;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      nav .content .btn:hover,
+      nav .content a:hover {
+        color: #555;
+      }
+      nav .content .btn:hover {
+        background: #444;
+      }
+      .container {
+        text-align: center;
+        padding: 60px 20px;
+      }
+      .container h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      .container p {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+      }
+      .flex-container .text,
+      .flex-container img {
+        flex: 1;
+        margin: 0 20px;
+      }
+      .flex-container .text h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      .flex-container .text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      @media (max-width: 1024px) {
+        .container h1 {
+          font-size: 36px;
+        }
+        .flex-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media (max-width: 768px) {
+        .container h1,
+        .flex-container .text h1 {
+          font-size: 28px;
+        }
+        .flex-container .text {
+          text-align: center;
+        }
+      }
+      .btn {
+        text-decoration: none;
+        background: #2b2c2c;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      img {
+        box-shadow: 0 4px 8px rgba(43, 44, 44, 0.5);
+      }
+      img:hover {
+        opacity: 85%;
+      }
+      .btn :hover {
+        background-color: aqua;
+      }
+      .flex-container-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 40px 20px;
+      }
+      .flex-container-1 .sublvl {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+      .flex-container-1 h3 {
+        color: #828282;
+        font-size: 24px;
+      }
+      .flex-container-1 h1 {
+        color: #2b2c2c;
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      .gg-bmw {
+        margin: 20px;
+        scale: 2.6;
+      }
+      .flex-container-1 p {
+        width: 396px;
+      }
+      .maincontainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        word-wrap: wrap;
+      }
+      .second-last {
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 200px;
+        gap: 44px;
+        align-items: center;
+      }
+      footer {
+        background-color: #f0f0f0;
+        padding: 20px 0;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: vertical;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+
+      .site-name h1 {
+        margin-bottom: 20px;
+      }
+
+      .topics {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .topic h2 {
+        margin-bottom: 10px;
+      }
+
+      .topic ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .topic ul li {
+        margin: 5px 0;
+      }
+
+      .topic ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .social-media a {
+        text-decoration: none;
+        color: #333;
+        font-size: 24px;
+      }
+
+      .social-media a:hover {
+        color: #000;
+      }
+
+      /* Font Awesome for social media icons */
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Site Name</div>
+      <div class="content">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#" class="btn">Button</a>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Landing page title</h1>
+      <p>And a subheading describing your site, too</p>
+      <a href="#" class="btn">Button</a>
+    </div>
+    <div class="flex-container">
+      <div class="text">
+        <h1>Heading</h1>
+        <p>A subheading for this section, as long or as short as you like</p>
+        <a href="#" class="btn">Button</a>
+      </div>
+      <img src="Image.png" alt="Pears" />
+    </div>
+    <div class="flex-container">
+      <img src="melon.png" alt="Pears" />
+      <div class="text">
+        <h1>Heading</h1>
+        <p>A subheading for this section, as long or as short as you like</p>
+        <a href="#" class="btn">Button</a>
+      </div>
+    </div>
+    <div class="maincontainer">
+      <div class="flex-container-1">
+        <h1 style="color: #2b2c2c">Heading</h1>
+        <div class="sublvl">
+          <i class="gg-bmw"></i>
+          <h3>subheading</h3>
+          <p>
+            Body text for whatever you’d like to say. Add main takeaway points,
+            quotes, anecdotes, or even a very very short story.
+          </p>
+        </div>
+      </div>
+      <div class="flex-container-1">
+        <h1 style="color: #2b2c2c">Heading</h1>
+        <div class="sublvl">
+          <i class="gg-bmw"></i>
+          <h3>subheading</h3>
+          <p>
+            Body text for whatever you’d like to say. Add main takeaway points,
+            quotes, anecdotes, or even a very very short story.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="maincontainer">
+      <div class="flex-container-1">
+        <h1 style="color: #2b2c2c">Heading</h1>
+        <div class="sublvl">
+          <i class="gg-bmw"></i>
+          <h3>subheading</h3>
+          <p>
+            Body text for whatever you’d like to say. Add main takeaway points,
+            quotes, anecdotes, or even a very very short story.
+          </p>
+        </div>
+      </div>
+      <div class="flex-container-1">
+        <h1 style="color: #2b2c2c">Heading</h1>
+        <div class="sublvl">
+          <i class="gg-bmw"></i>
+          <h3>subheading</h3>
+          <p>
+            Body text for whatever you’d like to say. Add main takeaway points,
+            quotes, anecdotes, or even a very very short story.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="second-last">
+      <h1>Heading</h1>
+      <p>Plus a subheading for your site’s footer</p>
+      <a class="btn" href="">Button</a>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="site-name">
+          <h1>Site name</h1>
+        </div>
+        <div class="topics">
+          <div class="topic">
+            <h2>Topic</h2>
+            <ul>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+          <div class="topic">
+            <h2>Topic</h2>
+            <ul>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+          <div class="topic">
+            <h2>Topic</h2>
+            <ul>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+              <li><a href="#">Page</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
